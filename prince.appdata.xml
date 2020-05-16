@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>prince.desktop</id>
+  <name>SDLPoP</name>
+  <summary>An open-source port of Prince of Persia</summary>
+  <description>
+  <p>
+  SDLPoP is an open-source port of Prince of Persia, based on the disassembly
+  of the DOS version.
+  </p>
+  </description>
+  <metadata_license>CC-BY-3.0</metadata_license>
+  <project_license>GPLv3+</project_license>
+  <url type="homepage">https://github.com/NagyD/SDLPoP/</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.popot.org/get_the_games/images/SDLPoP_1_big.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.popot.org/get_the_games/images/SDLPoP_2_big.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.popot.org/get_the_games/images/SDLPoP_3_big.png</image>
+    </screenshot>
+  </screenshots>
+</component>
+
