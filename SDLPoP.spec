@@ -1,6 +1,8 @@
+%define _legacy_common_support 1
+
 Name:           SDLPoP
 Version:        1.20
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        An open-source port of Prince of Persia
 
 License:        GPLv3+
@@ -79,6 +81,9 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/prince.appdata
 
 
 %changelog
+* Sat May 16 2020 Andrea Musuruane <musuruan@gmail.com> - 1.20-2
+- Fixed FTBFS for F32+
+
 * Sun Nov 24 2019 Andrea Musuruane <musuruan@gmail.com> - 1.20-1
 - Update to v1.20
 
