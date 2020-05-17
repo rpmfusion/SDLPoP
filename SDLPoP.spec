@@ -1,8 +1,6 @@
-%define _legacy_common_support 1
-
 Name:           SDLPoP
 Version:        1.20
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        An open-source port of Prince of Persia
 
 License:        GPLv3+
@@ -10,6 +8,9 @@ URL:            https://github.com/NagyD/SDLPoP
 Source0:        https://github.com/NagyD/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
 Source1:        prince.sh
 Source2:        prince.appdata.xml
+# Fix duplicate symbol errors when building with "-fno-common"
+# https://github.com/NagyD/SDLPoP/pull/203
+Patch0:         %{name}-1.20-dupl-symbols.patch
 
 BuildRequires:  gcc
 BuildRequires:  SDL2-devel
@@ -25,7 +26,7 @@ of the DOS version.
 
 
 %prep
-%autosetup 
+%autosetup -p1
 
 
 %build
@@ -81,6 +82,10 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/prince.appdata
 
 
 %changelog
+* Sun May 17 2020 Andrea Musuruane <musuruan@gmail.com> - 1.20-3
+- Added an upstream patch to properly fix duplicate symbol errors when
+  building with -fno-common
+
 * Sat May 16 2020 Andrea Musuruane <musuruan@gmail.com> - 1.20-2
 - Fixed FTBFS for F32+
 
