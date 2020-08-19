@@ -1,6 +1,6 @@
 Name:           SDLPoP
 Version:        1.20
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        An open-source port of Prince of Persia
 
 License:        GPLv3+
@@ -82,6 +82,9 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/prince.appdata
 
 
 %changelog
+* Wed Aug 19 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.20-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
+
 * Sun May 17 2020 Andrea Musuruane <musuruan@gmail.com> - 1.20-3
 - Added an upstream patch to properly fix duplicate symbol errors when
   building with -fno-common
