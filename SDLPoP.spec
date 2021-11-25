@@ -1,6 +1,6 @@
 Name:           SDLPoP
-Version:        1.20
-Release:        6%{?dist}
+Version:        1.22
+Release:        1%{?dist}
 Summary:        An open-source port of Prince of Persia
 
 License:        GPLv3+
@@ -8,9 +8,6 @@ URL:            https://github.com/NagyD/SDLPoP
 Source0:        https://github.com/NagyD/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
 Source1:        prince.sh
 Source2:        prince.appdata.xml
-# Fix duplicate symbol errors when building with "-fno-common"
-# https://github.com/NagyD/SDLPoP/pull/203
-Patch0:         %{name}-1.20-dupl-symbols.patch
 
 BuildRequires:  gcc
 BuildRequires:  SDL2-devel
@@ -26,7 +23,7 @@ of the DOS version.
 
 
 %prep
-%autosetup -p1
+%autosetup
 
 
 %build
@@ -78,10 +75,13 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/prince.appdata
 %{_datadir}/icons/hicolor/*/apps/prince.png
 %{_metainfodir}/prince.appdata.xml
 %license doc/gpl-3.0.txt
-%doc doc/Readme.txt doc/ChangeLog.txt doc/bugs.txt
+%doc doc/Readme.txt doc/ChangeLog.txt
 
 
 %changelog
+* Thu Nov 25 2021 Andrea Musuruane <musuruan@gmail.com> - 1.22-1
+- Update to v1.22
+
 * Tue Aug 03 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.20-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
