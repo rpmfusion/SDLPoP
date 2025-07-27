@@ -1,6 +1,6 @@
 Name:           SDLPoP
 Version:        1.23
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        An open-source port of Prince of Persia
 
 License:        GPLv3+
@@ -79,6 +79,9 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/prince.appdata
 
 
 %changelog
+* Sun Jul 27 2025 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 1.23-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_43_Mass_Rebuild
+
 * Mon Feb 24 2025 Andrea Musuruane <musuruan@gmail.com> - 1.23-1
 - Update to v1.23
 
